@@ -1,0 +1,25 @@
+# Demo CI workflow with TcUnit-Runner
+name: TcUnit-Runner
+ 
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+ 
+jobs:
+ 
+  tcunit_runner:
+ 
+    # a self hosted runner, i.e. VM with tag 'tcunit'
+    runs-on: [ self-hosted, tcunit ]
+ 
+    steps:
+ 
+      - name: Checkout repository
+        uses: actions/checkout@v2
+ 
+      - name: Run TcUnit-Runner
+        shell: cmd
+        # Start TcUnit-Runner with a timeout of 5 min
+        run: '"C:\Program Files (x86)\TcUnit-Runner\LaunchTcUnit.bat" -U 5'
