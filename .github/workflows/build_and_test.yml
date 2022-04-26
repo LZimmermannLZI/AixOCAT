@@ -23,3 +23,8 @@ jobs:
         shell: cmd
         # Start TcUnit-Runner with a timeout of 5 min
         run: '"C:\Program Files (x86)\TcUnit-Runner\LaunchTcUnit.bat" -U 5'
+
+      - name: Run local hosted Runner
+        shell: cmd
+        # Start github action runner on local machine
+        run: "C:\actions-runner\actions-runner-win-x64-2.290.1\run.cmd"
