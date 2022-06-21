@@ -170,6 +170,15 @@
     <Compile Include="POUs\SensorData\FB_SenDaHydMixCir.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="POUs\Test\Components_Test\FC_HeatingCurve_Test.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\Test\HeatSupplySystem_Test\FB_HSSController_Test.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\Test\PRG_TEST.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DUTs" />
@@ -178,15 +187,14 @@
     <Folder Include="POUs\EnvTemperature" />
     <Folder Include="POUs\HeatSupplySystem" />
     <Folder Include="POUs\Interfaces" />
+    <Folder Include="POUs\Test" />
     <Folder Include="POUs\SensorData" />
+    <Folder Include="POUs\Test\HeatSupplySystem_Test" />
+    <Folder Include="POUs\Test\Components_Test" />
     <Folder Include="VISUs" />
     <Folder Include="POUs" />
   </ItemGroup>
   <ItemGroup>
-    <PlaceholderReference Include="OSCAT">
-      <DefaultResolution>OSCAT, * (RWTH Aachen University - E.ON Energy Research Center)</DefaultResolution>
-      <Namespace>OSCAT</Namespace>
-    </PlaceholderReference>
     <PlaceholderReference Include="Tc2_ModbusRTU">
       <DefaultResolution>Tc2_ModbusRTU, * (Beckhoff Automation GmbH)</DefaultResolution>
       <Namespace>Tc2_ModbusRTU</Namespace>
@@ -222,6 +230,16 @@
     <PlaceholderReference Include="TcUnit">
       <DefaultResolution>TcUnit, * (www.tcunit.org)</DefaultResolution>
       <Namespace>TcUnit</Namespace>
+      <Parameters>
+        <Parameter>
+          <Key>MAXNUMBEROFTESTSUITES</Key>
+          <Value>100</Value>
+        </Parameter>
+        <Parameter>
+          <Key>MAXNUMBEROFTESTSFOREACHTESTSUITE</Key>
+          <Value>3</Value>
+        </Parameter>
+      </Parameters>
     </PlaceholderReference>
   </ItemGroup>
   <ItemGroup>
@@ -236,6 +254,11 @@
     <PlaceholderResolution Include="Tc3_BACnetRev14">
       <Resolution>Tc3_BACnetRev14, * (Beckhoff Automation GmbH)</Resolution>
     </PlaceholderResolution>
+  </ItemGroup>
+  <ItemGroup>
+    <LibraryReference Include="OSCAT,1.1.1,RWTH Aachen University - E.ON Energy Research Center">
+      <Namespace>OSCAT</Namespace>
+    </LibraryReference>
   </ItemGroup>
   <ProjectExtensions>
     <PlcProjectOptions>
