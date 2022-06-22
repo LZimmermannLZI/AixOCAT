@@ -237,7 +237,7 @@
         </Parameter>
         <Parameter>
           <Key>MAXNUMBEROFTESTSFOREACHTESTSUITE</Key>
-          <Value>3</Value>
+          <Value>8</Value>
         </Parameter>
       </Parameters>
     </PlaceholderReference>
