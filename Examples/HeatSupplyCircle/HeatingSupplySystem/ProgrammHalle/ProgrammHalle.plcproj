@@ -179,6 +179,9 @@
     <Compile Include="POUs\Test\PRG_TEST.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="UnitTest.TcTTO">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DUTs" />
