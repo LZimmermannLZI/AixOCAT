@@ -24,6 +24,9 @@ jobs:
         # Start TcUnit-Runner with a timeout of 5 min
         run: '"C:\Program Files (x86)\TcUnit-Runner\LaunchTcUnit.bat" -t UnitTest -a 134.130.166.132.1.1 -U 5'
         
+      - name: Setup Python
+        uses: actions/setup-python@v4.0.0
+        
       - name: Publish Test Results
         uses: EnricoMi/publish-unit-test-result-action/composite@v1
         if: always()
