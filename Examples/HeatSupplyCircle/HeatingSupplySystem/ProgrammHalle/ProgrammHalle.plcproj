@@ -190,6 +190,7 @@
     <Folder Include="POUs\EnvTemperature" />
     <Folder Include="POUs\HeatSupplySystem" />
     <Folder Include="POUs\Interfaces" />
+    <Folder Include="POUs\ForceCommit" />
     <Folder Include="POUs\Test" />
     <Folder Include="POUs\SensorData" />
     <Folder Include="POUs\Test\HeatSupplySystem_Test" />
