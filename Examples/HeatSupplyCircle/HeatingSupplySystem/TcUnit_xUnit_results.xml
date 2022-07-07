@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites failures="1" tests="4">
+  <testsuite id="0" name="PRG_TEST.HeatingCurve_Test" tests="4" failures="1">
+    <testcase name="TAmbNegative" assertions="1" classname="PRG_TEST.HeatingCurve_Test" status="PASS" />
+    <testcase name="TAmbZero" assertions="1" classname="PRG_TEST.HeatingCurve_Test" status="PASS" />
+    <testcase name="HeatingCurveZero" assertions="1" classname="PRG_TEST.HeatingCurve_Test" status="PASS" />
+    <testcase name="HeatingCurveNegative" assertions="1" classname="PRG_TEST.HeatingCurve_Test" status="FAIL">
+      <failure message="The calculation is not correct" type="REAL" />
+    </testcase>
+  </testsuite>
+</testsuites>
