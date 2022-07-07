@@ -27,7 +27,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v4.0.0
         with:
-          python-version-file: 'C:\actions-runner\_work\_tool\Python\3.10.5\x64\python-3.10.5-amd64.exe'
+          python-version: '3.x'
         
       - name: Publish Test Results
         uses: EnricoMi/publish-unit-test-result-action/composite@v1
