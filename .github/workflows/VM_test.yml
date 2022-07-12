@@ -10,7 +10,7 @@ on:
 jobs:
  
   tcunit_runner:
- 
+  
     # a self hosted runner, i.e. VM with tag 'tcunit'
     runs-on: [ self-hosted, VM ]
  
@@ -24,6 +24,12 @@ jobs:
         # Start TcUnit-Runner with a timeout of 5 min
         run: '"C:\Program Files (x86)\TcUnit-Runner\LaunchTcUnit.bat" -t UnitTest -a 134.130.166.132.1.1 -U 5'
         
+  test_results:
+  
+     runs-on: [ self-hosted, VM ]
+     
+     steps:
+     
       - name: Setup Python
         uses: actions/setup-python@v4.0.0
         with:
@@ -34,3 +40,8 @@ jobs:
         if: always()
         with:
             files: "**/*.xml"
+
+   
+   
+        
+
