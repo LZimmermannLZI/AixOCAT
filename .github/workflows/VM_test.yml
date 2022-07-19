@@ -36,7 +36,7 @@ jobs:
           python-version: '3.x'
           
       - name: Find Python Version
-        run: echo $(python -V)
+        run: 'echo $(python -V)'
         
       - name: Publish Test Results
         uses: EnricoMi/publish-unit-test-result-action/composite@v1
