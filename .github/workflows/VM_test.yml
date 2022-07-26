@@ -44,16 +44,9 @@ jobs:
         with:
             files: "**/*.xml"
             
-  html_generation:
-  
-      runs-on: [self-hosted, VM]
-      
-      steps:
-      
-       - name: NUnit HTML Report
-         uses: rempelj/nunit-html-action@v1.0.1
-         if: always()
-         with:
-             inputXmlPath: C:\actions-runner\_work\AixOCAT\AixOCAT\Examples\HeatSupplyCircle\HeatingSupplySystem\TcUnit_xUnit_results.xml
-             outputHtmlPath: C:\actions-runner\_work\AixOCAT\AixOCAT\Examples\HeatSupplyCircle\HeatingSupplySystem\TcUnit_xUnit_results.html 
-        
+      - name: Publish TcUnit results 
+        uses: PublishTestResults@2
+        with:
+            testResultsFormat: 'JUnit'
+            testResultsFiles: '**/TcUnit_xUnit_results.xml'
+            
