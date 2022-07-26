@@ -30,8 +30,7 @@ jobs:
      needs: tcunit_runner
      steps:
                        
-      - name: report unit test results
-        uses: KyleAure/junit-report-annotations-action@1.5
+      - uses: KyleAure/junit-report-annotations-action@1.5
         if: always()
         with:
           name: results TcUnit tests
