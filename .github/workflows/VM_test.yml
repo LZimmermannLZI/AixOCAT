@@ -23,13 +23,7 @@ jobs:
         shell: cmd
         # Start TcUnit-Runner with a timeout of 5 min
         run: '"C:\Program Files (x86)\TcUnit-Runner\LaunchTcUnit.bat" -t UnitTest -a 134.130.166.132.1.1 -U 5'
-        
-  test_results:
-  
-     runs-on: [ self-hosted, VM ]
-     needs: tcunit_runner
-     steps:
-                       
+                               
       - uses: KyleAure/junit-report-annotations-action@1.5
         if: always()
         with:
