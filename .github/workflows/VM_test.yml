@@ -43,6 +43,20 @@ jobs:
         if: always()
         with:
             files: "**/*.xml"
+            
+  html_generation:
+  
+      runs-on: [self-hosted, VM]
+      
+      steps:
+      
+       - name: NUnit HTML Report
+         uses: rempelj/nunit-html-action@v1.0.1
+         if: always()
+
+
+
+  
 
    
    
