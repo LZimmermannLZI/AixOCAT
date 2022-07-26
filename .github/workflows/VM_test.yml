@@ -44,9 +44,11 @@ jobs:
         with:
             files: "**/*.xml"
             
-      - name: Publish TcUnit results 
-        uses: PublishTestResults@2
+      - name: report unit test results
+        uses: KyleAure/junit-report-annotations-action@1.5
+        if: always()
         with:
-            testResultsFormat: 'JUnit'
-            testResultsFiles: '**/TcUnit_xUnit_results.xml'
+          name: results TcUnit tests
+          path: ${{ github.workspace }}/**/TcUnit_xUnit_results.xml          
+          access-token: ${{ secrets.GITHUB_TOKEN }}
             
