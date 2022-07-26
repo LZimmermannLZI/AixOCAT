@@ -29,21 +29,7 @@ jobs:
      runs-on: [ self-hosted, VM ]
      
      steps:
-     
-      - name: Setup Python
-        uses: actions/setup-python@v4.0.0
-        with:
-          python-version: '3.10.5'
-          
-      - name: Find Python Version
-        run: CPython --version
-        
-      - name: Publish Test Results
-        uses: EnricoMi/publish-unit-test-result-action/composite@v1
-        if: always()
-        with:
-            files: "**/*.xml"
-            
+                       
       - name: report unit test results
         uses: KyleAure/junit-report-annotations-action@1.5
         if: always()
