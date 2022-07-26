@@ -36,7 +36,7 @@ jobs:
           python-version: '3.10.5'
           
       - name: Find Python Version
-        run: python --version
+        run: CPython --version
         
       - name: Publish Test Results
         uses: EnricoMi/publish-unit-test-result-action/composite@v1
