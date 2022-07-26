@@ -27,7 +27,7 @@ jobs:
   test_results:
   
      runs-on: [ self-hosted, VM ]
-     
+     needs: tcunit_runner
      steps:
                        
       - name: report unit test results
