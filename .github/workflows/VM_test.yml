@@ -54,6 +54,6 @@ jobs:
          uses: rempelj/nunit-html-action@v1.0.1
          if: always()
          with:
-             inputXmlPath: C:\actions-runner\_work\AixOCAT\AixOCAT\Examples\HeatSupplyCircle\HeatingSupplySystem.xml
-             outputHtmlPath: C:\actions-runner\_work\AixOCAT\AixOCAT\Examples\HeatSupplyCircle\HeatingSupplySystem.html 
+             inputXmlPath: C:\actions-runner\_work\AixOCAT\AixOCAT\Examples\HeatSupplyCircle\HeatingSupplySystem\TcUnit_xUnit_results.xml
+             outputHtmlPath: C:\actions-runner\_work\AixOCAT\AixOCAT\Examples\HeatSupplyCircle\HeatingSupplySystem\TcUnit_xUnit_results.html 
         
