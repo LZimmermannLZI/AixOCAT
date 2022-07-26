@@ -53,12 +53,7 @@ jobs:
        - name: NUnit HTML Report
          uses: rempelj/nunit-html-action@v1.0.1
          if: always()
-
-
-
-  
-
-   
-   
+         with:
+             inputXmlPath: C:\actions-runner\_work\AixOCAT\AixOCAT\Examples\HeatSupplyCircle\HeatingSupplySystem.xml
+             outputHtmlPath: C:\actions-runner\_work\AixOCAT\AixOCAT\Examples\HeatSupplyCircle\HeatingSupplySystem.html 
         
-
