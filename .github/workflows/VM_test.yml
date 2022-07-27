@@ -10,7 +10,7 @@ on:
 jobs:
  
   tcunit_runner:
- 
+  
     # a self hosted runner, i.e. VM with tag 'tcunit'
     runs-on: [ self-hosted, VM ]
  
@@ -23,14 +23,11 @@ jobs:
         shell: cmd
         # Start TcUnit-Runner with a timeout of 5 min
         run: '"C:\Program Files (x86)\TcUnit-Runner\LaunchTcUnit.bat" -t UnitTest -a 134.130.166.132.1.1 -U 5'
-        
-      - name: Setup Python
-        uses: actions/setup-python@v4.0.0
-        with:
-          python-version: '3.x'
-        
-      - name: Publish Test Results
-        uses: EnricoMi/publish-unit-test-result-action/composite@v1
+                               
+      - uses: KyleAure/junit-report-annotations-action@1.5
         if: always()
         with:
-            files: "**/*.xml"
+            name: results TcUnit tests
+            path: ${{ github.workspace }}/**/TcUnit_xUnit_results.xml          
+            access-token: ${{ secrets.GITHUB_TOKEN }}
+            
