@@ -12,7 +12,7 @@ jobs:
   tcunit_runner:
   
     # a self hosted runner, i.e. VM with tag 'tcunit'
-    runs-on: [ self-hosted, VM ]
+    runs-on: [ self-hosted, tcunit ]
  
     steps:
  
