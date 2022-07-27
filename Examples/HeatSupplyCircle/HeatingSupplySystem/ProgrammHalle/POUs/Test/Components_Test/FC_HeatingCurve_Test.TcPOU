@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.9">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
   <POU Name="FC_HeatingCurve_Test" Id="{8e411346-ca53-4fb8-b98d-0f5f8749ec27}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FC_HeatingCurve_Test EXTENDS TcUnit.FB_TestSuite // This block calls the different Test methods
 VAR
@@ -79,7 +79,7 @@ TEST_FINISHED();]]></ST>
       <Declaration><![CDATA[METHOD TAmbZero // This method checks whether zero degrees as ambient temperature work properly
 VAR
 	HeatingCurveRes : REAL;		  //Actual value for Heating Curve
-	ExpectedValue : REAL := 35;   //Expected value for Heating Curve
+	ExpectedValue : REAL := 36;   //Expected value for Heating Curve
 	fSlope: REAL := -1;				  //Slope of Heating Curve	
 	fOffset: REAL := 35;				  //Offset of Heating Curve
 
