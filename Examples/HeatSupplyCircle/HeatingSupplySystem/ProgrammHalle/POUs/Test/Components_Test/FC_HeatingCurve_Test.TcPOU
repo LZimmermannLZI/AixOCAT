@@ -15,7 +15,7 @@ HeatingCurveNegative();]]></ST>
       <Declaration><![CDATA[METHOD HeatingCurveNegative // This method checks whether the heating curve can have a negative value
 VAR
 	HeatingCurveRes: Real;		//Actual value for Heating Curve
-	ExpectedValue : REAL := -2;	//Expected value for Heating Curve
+	ExpectedValue : REAL := -1;	//Expected value for Heating Curve
 	fSlope: REAL := -1;				//Slope of Heating Curve
 	fOffset: REAL := 35;				//Offset of Heating Curve
 END_VAR
