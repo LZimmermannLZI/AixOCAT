@@ -13,6 +13,8 @@ jobs:
   
     # a self hosted runner, i.e. VM with tag 'tcunit'
     runs-on: [ self-hosted, tcunit ]
+    strategy:
+      fail-fast: false
  
     steps:
  
