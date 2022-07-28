@@ -36,7 +36,7 @@ jobs:
     # Without this step workflow remains "green" if job2 does fail.
     name: Unit Test Status -> Workflow Status
     needs:
-      - tcunit-runner
+      - tcunit_runner
     runs-on: [ self-hosted, tcunit ]
     if: always()
     steps:
