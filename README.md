@@ -3,7 +3,7 @@
 
 # AixOCAT - Library framework for building automation systems based on the OSCAT libraries
 
-[![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org) [![VM TcUnit-Runner](https://github.com/LZimmermannLZI/AixOCAT/actions/workflows/VM_test.yml/badge.svg)](https://github.com/LZimmermannLZI/AixOCAT/commit/$GITHUB_SHA/checks)
+[![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org) [![VM TcUnit-Runner](https://github.com/LZimmermannLZI/AixOCAT/actions/workflows/VM_test.yml/badge.svg)](https://github.com/LZimmermannLZI/AixOCAT/actions/RUN_ID)
 
 AixOCAT is an open source software library for the implementation of control algorithms in building automation systems and test benches and is based on the [OSCAT](http://www.oscat.de/) libraries.
 
