@@ -666,3 +666,6 @@ F:/Users/MarkusSchraven/Desktop/PS/Git/AixOCAT/Interfaces/Python/MQTT-ADS-interf
 F:/Users/MarkusSchraven/Desktop/PS/Git/AixOCAT/Interfaces/Python/MQTT-ADS-interface/config_Teamrunde.ini
 
 *.bak
+
+# Hardlinked POUs fot unit testing
+*\Examples\Tests\TcUnit_Tests\TcUnit_Tests\TcUnit_Tests\POUs
