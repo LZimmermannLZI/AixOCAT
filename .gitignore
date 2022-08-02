@@ -668,4 +668,4 @@ F:/Users/MarkusSchraven/Desktop/PS/Git/AixOCAT/Interfaces/Python/MQTT-ADS-interf
 *.bak
 
 # Hardlinked POUs fot unit testing
-*\Examples\Tests\TcUnit_Tests\TcUnit_Tests\TcUnit_Tests\POUs\*.TcPOU
+*/Examples/Tests/TcUnit_Tests/TcUnit_Tests/TcUnit_Tests/POUs/*.TcPOU
