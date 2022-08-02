@@ -14,6 +14,7 @@
     <Implicit_Jitter_Distribution>{b1be7629-a4c5-43fb-a608-764a573eea48}</Implicit_Jitter_Distribution>
     <LibraryReferences>{8d3f194e-7bcd-4ae8-9cbc-d45f0f994227}</LibraryReferences>
     <CompilerDefines>VISU_USEPROPERTYINFO</CompilerDefines>
+    <Released>false</Released>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="DUTs\E_PowMeas.TcDUT">
