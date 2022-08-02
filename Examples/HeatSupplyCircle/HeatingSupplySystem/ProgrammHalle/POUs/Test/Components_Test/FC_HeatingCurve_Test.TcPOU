@@ -79,7 +79,7 @@ TEST_FINISHED();]]></ST>
       <Declaration><![CDATA[METHOD TAmbZero // This method checks whether zero degrees as ambient temperature work properly
 VAR
 	HeatingCurveRes : REAL;		  //Actual value for Heating Curve
-	ExpectedValue : REAL := 36;   //Expected value for Heating Curve
+	ExpectedValue : REAL := 35;   //Expected value for Heating Curve
 	fSlope: REAL := -1;				  //Slope of Heating Curve	
 	fOffset: REAL := 35;				  //Offset of Heating Curve
 
