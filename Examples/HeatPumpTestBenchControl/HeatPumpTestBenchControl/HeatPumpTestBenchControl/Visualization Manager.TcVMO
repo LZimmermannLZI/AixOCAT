@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4018.2">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.9">
   <VisuManager Name="Visualization Manager" Id="{679530de-79cd-4376-a34b-98260183cd35}">
     <XmlArchive>
       <Data>
         <o xml:space="preserve" t="VisualManagerObject">
+          <v n="UseUnicodeStrings" t="UnicodeSupport">Undefined</v>
           <o n="ViewSettings" t="VisualManagerViewSettings">
             <n n="StartVisu" />
             <v n="StartVisu33">"StandardVis"</v>
@@ -29,15 +30,25 @@
             <v n="SemiTransparentDrawingActive">true</v>
             <v n="UpdateColorvariablesAfterActivationDone">true</v>
             <v n="TransferSvgAndConvertedImages">false</v>
+            <v n="LoginDialog">"VisuUserManagement.VUM_Login"</v>
+            <v n="ChangePasswordDialog">"VisuUserManagement.VUM_ChangePassword"</v>
+            <v n="ChangeConfigDialog">"VisuUserManagement.VUM_UserManagement"</v>
+            <v n="GuidShowChangePasswordDialogFunction">{00000000-0000-0000-0000-000000000000}</v>
+            <v n="GuidShowChangeConfigDialogFunction">{00000000-0000-0000-0000-000000000000}</v>
+            <v n="UseStandardKeyboardHandling">true</v>
+            <v n="PaintDeactiveElementsGrayedOut">true</v>
+            <n n="GlobalOpenNumpadKeypadSettings" />
+            <v n="ConvertImages">false</v>
+            <v n="ConversionType">""</v>
           </o>
           <o n="RegisterDesc" t="GenericFbDescription">
             <d n="FbMethods" t="CaseInsensitiveHashtable" ckt="String" cvt="Guid">
               <v>FB_Init</v>
               <v>d5888c41-2c52-488e-9e6e-b425cddd2f63</v>
-              <v>FB_Reinit</v>
-              <v>e080d78a-fb63-4cc7-9ffb-d35ad5f1bca5</v>
               <v>FB_Exit</v>
               <v>43b7292a-6cce-4e8d-871e-f151d40b882d</v>
+              <v>FB_Reinit</v>
+              <v>e080d78a-fb63-4cc7-9ffb-d35ad5f1bca5</v>
             </d>
             <v n="FbName">"NotImportant"</v>
             <v n="FbGuid">{8485c566-8726-46eb-bf3b-8ae3c90a5de6}</v>
@@ -47,7 +58,7 @@
               <v n="Modifiers">7</v>
               <v n="DevType">4096</v>
               <v n="DevId">"1002 0004"</v>
-              <v n="DevVersion">"1.0.0.0"</v>
+              <v n="DevVersion">"1.0.0.6"</v>
               <v n="BaseProvider">{cb73a13e-6ccc-4bc6-8859-f5aa98bb116b}</v>
               <l n="Keys" t="ArrayList" cet="DeviceBasedHotkeyItem">
                 <o>
@@ -511,6 +522,9 @@
           <v n="UseUserMgmtInPlc">true</v>
           <n n="RemoteUserMgmtPath" />
           <n n="FontsConfig" />
+          <n n="FontDownloadConfig" />
+          <n n="VisuInitializationCode" />
+          <n n="FontSettings" />
           <v n="GuidVisuSettingsPou">{0d237588-5fa7-4247-93a9-144f160e933f}</v>
           <v n="GuidVisuSettingsPouInit">{f4a5207b-2fcb-4394-aece-fb901bbe3197}</v>
           <v n="GuidVisuSettingsPouReInit">{bd1c9692-59eb-4072-a83b-d653a8ca5ca1}</v>
@@ -558,6 +572,7 @@
         <Type n="Int32">System.Int32</Type>
         <Type n="Int64">System.Int64</Type>
         <Type n="String">System.String</Type>
+        <Type n="UnicodeSupport">{19611221-ebd3-4607-86d2-9822fbe84c30}</Type>
         <Type n="VisualClientSizeMode">{c37fe731-4f69-4d98-82fe-4f9aefbe200d}</Type>
         <Type n="VisualizationClientReferencesSet">{f348a7f0-9602-490e-8c1b-295c0602e7a6}</Type>
         <Type n="VisualizationInstantiationExplicitEntry">{28102c5e-89a3-48b7-8c0c-c747111b6ab8}</Type>

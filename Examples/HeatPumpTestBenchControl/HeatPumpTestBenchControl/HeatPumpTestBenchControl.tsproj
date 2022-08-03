@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4022.4">
+<?xml version="1.0"?>
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.20">
 	<DataTypes>
 		<DataType>
 			<Name GUID="{0CFD9E98-65E9-5BF4-A962-128B6A7B2CBB}" IecBaseType="true" AutoDeleteType="true">ARRAY [0..8] OF BOOL</Name>
@@ -65,7 +65,7 @@
 			</ArrayInfo>
 		</DataType>
 		<DataType>
-			<Name GUID="{18071995-0000-0000-0000-002000000003}" IecBaseType="true" BitType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..2] OF BIT</Name>
+			<Name GUID="{18071995-0000-0000-0000-002000000003}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..2] OF BIT</Name>
 			<BitSize>3</BitSize>
 			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
 			<ArrayInfo>
@@ -74,7 +74,7 @@
 			</ArrayInfo>
 		</DataType>
 		<DataType>
-			<Name GUID="{18071995-0000-0000-0000-002000000002}" IecBaseType="true" BitType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..1] OF BIT</Name>
+			<Name GUID="{18071995-0000-0000-0000-002000000002}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..1] OF BIT</Name>
 			<BitSize>2</BitSize>
 			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
 			<ArrayInfo>
@@ -91,6 +91,9 @@
 	</ImageDatas>
 	<Project ProjectGUID="{86D21BE6-7F9D-478D-9B74-A1149E4E8582}" Target64Bit="true" ShowHideConfigurations="#x306">
 		<System>
+			<Settings MaxCpus="4" NonWinCpus="1" Packages="4">
+				<Cpu CpuId="3"/>
+			</Settings>
 			<Tasks>
 				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350">
 					<Name>PlcTask</Name>
@@ -106,9 +109,7 @@
 						<Name>PlcTask Inputs</Name>
 						<Var>
 							<Name>PowMeas.stPowMeas[0].nCurrentRaw</Name>
-							<Comment>
-								<![CDATA[Input from terminal as INT32]]>
-							</Comment>
+							<Comment><![CDATA[Input from terminal as INT32]]></Comment>
 							<Type>DINT</Type>
 						</Var>
 						<Var>
@@ -121,16 +122,12 @@
 						</Var>
 						<Var>
 							<Name>PowMeas.stPowMeas[0].nVariantRaw</Name>
-							<Comment>
-								<![CDATA[set to cos(phi)]]>
-							</Comment>
+							<Comment><![CDATA[set to cos(phi)]]></Comment>
 							<Type>DINT</Type>
 						</Var>
 						<Var>
 							<Name>PowMeas.stPowMeas[1].nCurrentRaw</Name>
-							<Comment>
-								<![CDATA[Input from terminal as INT32]]>
-							</Comment>
+							<Comment><![CDATA[Input from terminal as INT32]]></Comment>
 							<Type>DINT</Type>
 						</Var>
 						<Var>
@@ -143,16 +140,12 @@
 						</Var>
 						<Var>
 							<Name>PowMeas.stPowMeas[1].nVariantRaw</Name>
-							<Comment>
-								<![CDATA[set to cos(phi)]]>
-							</Comment>
+							<Comment><![CDATA[set to cos(phi)]]></Comment>
 							<Type>DINT</Type>
 						</Var>
 						<Var>
 							<Name>PowMeas.stPowMeas[2].nCurrentRaw</Name>
-							<Comment>
-								<![CDATA[Input from terminal as INT32]]>
-							</Comment>
+							<Comment><![CDATA[Input from terminal as INT32]]></Comment>
 							<Type>DINT</Type>
 						</Var>
 						<Var>
@@ -165,368 +158,277 @@
 						</Var>
 						<Var>
 							<Name>PowMeas.stPowMeas[2].nVariantRaw</Name>
-							<Comment>
-								<![CDATA[set to cos(phi)]]>
-							</Comment>
+							<Comment><![CDATA[set to cos(phi)]]></Comment>
 							<Type>DINT</Type>
 						</Var>
 						<Var>
 							<Name>PowMeas.bPhaseSeq</Name>
-							<Comment>
-								<![CDATA[Phase sequence detected by the power measurement terminal]]>
-							</Comment>
+							<Comment><![CDATA[Phase sequence detected by the power measurement terminal]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>Pressures.stPress[0].nVarInput</Name>
-							<Comment>
-								<![CDATA[Integer input from terminal]]>
-							</Comment>
+							<Comment><![CDATA[Integer input from terminal]]></Comment>
 							<Type>DINT</Type>
 						</Var>
 						<Var>
 							<Name>Pressures.stPress[0].bSensErr</Name>
-							<Comment>
-								<![CDATA[Sensor error bit]]>
-							</Comment>
+							<Comment><![CDATA[Sensor error bit]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>Pressures.stPress[1].nVarInput</Name>
-							<Comment>
-								<![CDATA[Integer input from terminal]]>
-							</Comment>
+							<Comment><![CDATA[Integer input from terminal]]></Comment>
 							<Type>DINT</Type>
 						</Var>
 						<Var>
 							<Name>Pressures.stPress[1].bSensErr</Name>
-							<Comment>
-								<![CDATA[Sensor error bit]]>
-							</Comment>
+							<Comment><![CDATA[Sensor error bit]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>Pressures.stPress[2].nVarInput</Name>
-							<Comment>
-								<![CDATA[Integer input from terminal]]>
-							</Comment>
+							<Comment><![CDATA[Integer input from terminal]]></Comment>
 							<Type>DINT</Type>
 						</Var>
 						<Var>
 							<Name>Pressures.stPress[2].bSensErr</Name>
-							<Comment>
-								<![CDATA[Sensor error bit]]>
-							</Comment>
+							<Comment><![CDATA[Sensor error bit]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>Pressures.stPress[3].nVarInput</Name>
-							<Comment>
-								<![CDATA[Integer input from terminal]]>
-							</Comment>
+							<Comment><![CDATA[Integer input from terminal]]></Comment>
 							<Type>DINT</Type>
 						</Var>
 						<Var>
 							<Name>Pressures.stPress[3].bSensErr</Name>
-							<Comment>
-								<![CDATA[Sensor error bit]]>
-							</Comment>
+							<Comment><![CDATA[Sensor error bit]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>Temperatures.stTempSensVR10[0].nVarInput</Name>
-							<Comment>
-								<![CDATA[Integer input from terminal]]>
-							</Comment>
+							<Comment><![CDATA[Integer input from terminal]]></Comment>
 							<Type>DINT</Type>
 						</Var>
 						<Var>
 							<Name>Temperatures.stTempSensVR10[0].bSensErr</Name>
-							<Comment>
-								<![CDATA[Sensor error bit]]>
-							</Comment>
+							<Comment><![CDATA[Sensor error bit]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>Temperatures.stTempSensVR10[1].nVarInput</Name>
-							<Comment>
-								<![CDATA[Integer input from terminal]]>
-							</Comment>
+							<Comment><![CDATA[Integer input from terminal]]></Comment>
 							<Type>DINT</Type>
 						</Var>
 						<Var>
 							<Name>Temperatures.stTempSensVR10[1].bSensErr</Name>
-							<Comment>
-								<![CDATA[Sensor error bit]]>
-							</Comment>
+							<Comment><![CDATA[Sensor error bit]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>Temperatures.stTempSensVR10[2].nVarInput</Name>
-							<Comment>
-								<![CDATA[Integer input from terminal]]>
-							</Comment>
+							<Comment><![CDATA[Integer input from terminal]]></Comment>
 							<Type>DINT</Type>
 						</Var>
 						<Var>
 							<Name>Temperatures.stTempSensVR10[2].bSensErr</Name>
-							<Comment>
-								<![CDATA[Sensor error bit]]>
-							</Comment>
+							<Comment><![CDATA[Sensor error bit]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>Temperatures.stTempSensVR10[3].nVarInput</Name>
-							<Comment>
-								<![CDATA[Integer input from terminal]]>
-							</Comment>
+							<Comment><![CDATA[Integer input from terminal]]></Comment>
 							<Type>DINT</Type>
 						</Var>
 						<Var>
 							<Name>Temperatures.stTempSensVR10[3].bSensErr</Name>
-							<Comment>
-								<![CDATA[Sensor error bit]]>
-							</Comment>
+							<Comment><![CDATA[Sensor error bit]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>Temperatures.stTempSensVR11[0].nVarInput</Name>
-							<Comment>
-								<![CDATA[Integer input from terminal]]>
-							</Comment>
+							<Comment><![CDATA[Integer input from terminal]]></Comment>
 							<Type>DINT</Type>
 						</Var>
 						<Var>
 							<Name>Temperatures.stTempSensVR11[0].bSensErr</Name>
-							<Comment>
-								<![CDATA[Sensor error bit]]>
-							</Comment>
+							<Comment><![CDATA[Sensor error bit]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>Temperatures.stTempSensVR11[1].nVarInput</Name>
-							<Comment>
-								<![CDATA[Integer input from terminal]]>
-							</Comment>
+							<Comment><![CDATA[Integer input from terminal]]></Comment>
 							<Type>DINT</Type>
 						</Var>
 						<Var>
 							<Name>Temperatures.stTempSensVR11[1].bSensErr</Name>
-							<Comment>
-								<![CDATA[Sensor error bit]]>
-							</Comment>
+							<Comment><![CDATA[Sensor error bit]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>Temperatures.stTempSensVR11[2].nVarInput</Name>
-							<Comment>
-								<![CDATA[Integer input from terminal]]>
-							</Comment>
+							<Comment><![CDATA[Integer input from terminal]]></Comment>
 							<Type>DINT</Type>
 						</Var>
 						<Var>
 							<Name>Temperatures.stTempSensVR11[2].bSensErr</Name>
-							<Comment>
-								<![CDATA[Sensor error bit]]>
-							</Comment>
+							<Comment><![CDATA[Sensor error bit]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>Temperatures.stTempSensVR11[3].nVarInput</Name>
-							<Comment>
-								<![CDATA[Integer input from terminal]]>
-							</Comment>
+							<Comment><![CDATA[Integer input from terminal]]></Comment>
 							<Type>DINT</Type>
 						</Var>
 						<Var>
 							<Name>Temperatures.stTempSensVR11[3].bSensErr</Name>
-							<Comment>
-								<![CDATA[Sensor error bit]]>
-							</Comment>
+							<Comment><![CDATA[Sensor error bit]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>Temperatures.stTempSensVR11[4].nVarInput</Name>
-							<Comment>
-								<![CDATA[Integer input from terminal]]>
-							</Comment>
+							<Comment><![CDATA[Integer input from terminal]]></Comment>
 							<Type>DINT</Type>
 						</Var>
 						<Var>
 							<Name>Temperatures.stTempSensVR11[4].bSensErr</Name>
-							<Comment>
-								<![CDATA[Sensor error bit]]>
-							</Comment>
+							<Comment><![CDATA[Sensor error bit]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>Temperatures.stTempSensVR11[5].nVarInput</Name>
-							<Comment>
-								<![CDATA[Integer input from terminal]]>
-							</Comment>
+							<Comment><![CDATA[Integer input from terminal]]></Comment>
 							<Type>DINT</Type>
 						</Var>
 						<Var>
 							<Name>Temperatures.stTempSensVR11[5].bSensErr</Name>
-							<Comment>
-								<![CDATA[Sensor error bit]]>
-							</Comment>
+							<Comment><![CDATA[Sensor error bit]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>Temperatures.stTempSensVR11[6].nVarInput</Name>
-							<Comment>
-								<![CDATA[Integer input from terminal]]>
-							</Comment>
+							<Comment><![CDATA[Integer input from terminal]]></Comment>
 							<Type>DINT</Type>
 						</Var>
 						<Var>
 							<Name>Temperatures.stTempSensVR11[6].bSensErr</Name>
-							<Comment>
-								<![CDATA[Sensor error bit]]>
-							</Comment>
+							<Comment><![CDATA[Sensor error bit]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>Temperatures.stTempSensPT100[0].nVarInput</Name>
-							<Comment>
-								<![CDATA[Integer input from terminal]]>
-							</Comment>
+							<Comment><![CDATA[Integer input from terminal]]></Comment>
 							<Type>DINT</Type>
 						</Var>
 						<Var>
 							<Name>Temperatures.stTempSensPT100[0].bSensErr</Name>
-							<Comment>
-								<![CDATA[Sensor error bit]]>
-							</Comment>
+							<Comment><![CDATA[Sensor error bit]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>Temperatures.stTempSensPT100[1].nVarInput</Name>
-							<Comment>
-								<![CDATA[Integer input from terminal]]>
-							</Comment>
+							<Comment><![CDATA[Integer input from terminal]]></Comment>
 							<Type>DINT</Type>
 						</Var>
 						<Var>
 							<Name>Temperatures.stTempSensPT100[1].bSensErr</Name>
-							<Comment>
-								<![CDATA[Sensor error bit]]>
-							</Comment>
+							<Comment><![CDATA[Sensor error bit]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>Temperatures.stTempSensPT100[2].nVarInput</Name>
-							<Comment>
-								<![CDATA[Integer input from terminal]]>
-							</Comment>
+							<Comment><![CDATA[Integer input from terminal]]></Comment>
 							<Type>DINT</Type>
 						</Var>
 						<Var>
 							<Name>Temperatures.stTempSensPT100[2].bSensErr</Name>
-							<Comment>
-								<![CDATA[Sensor error bit]]>
-							</Comment>
+							<Comment><![CDATA[Sensor error bit]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>Temperatures.stTempSensPT100[3].nVarInput</Name>
-							<Comment>
-								<![CDATA[Integer input from terminal]]>
-							</Comment>
+							<Comment><![CDATA[Integer input from terminal]]></Comment>
 							<Type>DINT</Type>
 						</Var>
 						<Var>
 							<Name>Temperatures.stTempSensPT100[3].bSensErr</Name>
-							<Comment>
-								<![CDATA[Sensor error bit]]>
-							</Comment>
+							<Comment><![CDATA[Sensor error bit]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>TerminalErrorRT.bTermRt</Name>
-							<Comment>
-								<![CDATA[check if the real-time communication with the terminals reports errors
+							<Comment><![CDATA[check if the real-time communication with the terminals reports errors
 checks State of Working Counter: 
 0 - valid real-time communication
-1 - invalid real-time communication]]>
-							</Comment>
+1 - invalid real-time communication]]></Comment>
 							<Type GUID="{0CFD9E98-65E9-5BF4-A962-128B6A7B2CBB}">ARRAY [0..8] OF BOOL</Type>
 						</Var>
 					</Vars>
-					<Vars VarGrpType="2">
+					<Vars VarGrpType="2" AreaNo="1">
 						<Name>PlcTask Outputs</Name>
 						<Var>
 							<Name>DigOutputs.bOutpComp</Name>
-							<Comment>
-								<![CDATA[Activate compressor - default: false]]>
-							</Comment>
+							<Comment><![CDATA[Activate compressor - default: false]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>DigOutputs.bOutpAH</Name>
-							<Comment>
-								<![CDATA[Activate auxiliary heater - default: false]]>
-							</Comment>
+							<Comment><![CDATA[Activate auxiliary heater - default: false]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>DigOutputs.bSHDHWSwitchValv</Name>
-							<Comment>
-								<![CDATA[Control signal for switching valve - Space Heating/DHW]]>
-							</Comment>
+							<Comment><![CDATA[Control signal for switching valve - Space Heating/DHW]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>AnaOutputs.stOutpBP.nVarOutput</Name>
-							<Comment>
-								<![CDATA[Output to terminal]]>
-							</Comment>
+							<Comment><![CDATA[Output to terminal]]></Comment>
 							<Type>INT</Type>
 						</Var>
 						<Var>
 							<Name>AnaOutputs.stOutpIntHP.nVarOutput</Name>
-							<Comment>
-								<![CDATA[Output to terminal]]>
-							</Comment>
+							<Comment><![CDATA[Output to terminal]]></Comment>
 							<Type>INT</Type>
 						</Var>
 						<Var>
 							<Name>AnaOutputs.stOutpExtHP.nVarOutput</Name>
-							<Comment>
-								<![CDATA[Output to terminal]]>
-							</Comment>
+							<Comment><![CDATA[Output to terminal]]></Comment>
 							<Type>INT</Type>
 						</Var>
 						<Var>
 							<Name>AnaOutputs.stOutpMixValv.nVarOutput</Name>
-							<Comment>
-								<![CDATA[Output to terminal]]>
-							</Comment>
+							<Comment><![CDATA[Output to terminal]]></Comment>
 							<Type>INT</Type>
 						</Var>
 						<Var>
 							<Name>PowMeas.stPowMeas[0].nIndexOut</Name>
-							<Comment>
-								<![CDATA[cos(phi)]]>
-							</Comment>
+							<Comment><![CDATA[cos(phi)]]></Comment>
 							<Type>USINT</Type>
 						</Var>
 						<Var>
 							<Name>PowMeas.stPowMeas[1].nIndexOut</Name>
-							<Comment>
-								<![CDATA[cos(phi)]]>
-							</Comment>
+							<Comment><![CDATA[cos(phi)]]></Comment>
 							<Type>USINT</Type>
 						</Var>
 						<Var>
 							<Name>PowMeas.stPowMeas[2].nIndexOut</Name>
-							<Comment>
-								<![CDATA[cos(phi)]]>
-							</Comment>
+							<Comment><![CDATA[cos(phi)]]></Comment>
 							<Type>USINT</Type>
 						</Var>
 					</Vars>
+					<Contexts>
+						<Context>
+							<Id NeedCalleeCall="true">0</Id>
+							<Name>PlcTask</Name>
+							<ManualConfig>
+								<OTCID>#x02010030</OTCID>
+							</ManualConfig>
+							<Priority>20</Priority>
+							<CycleTime>10000000</CycleTime>
+						</Context>
+					</Contexts>
 					<TaskPouOids>
 						<TaskPouOid Prio="20" OTCID="#x08502001"/>
 					</TaskPouOids>
@@ -534,23 +436,23 @@ checks State of Working Counter:
 			</Project>
 		</Plc>
 		<Io>
-			<Device Disabled="true" DevType="111" DevFlags="#x0003" AmsPort="28673" AmsNetId="134.61.132.51.2.1" RemoteName="Device 1 (EtherCAT)" Id="1">
+			<Device Id="1" Disabled="true" DevType="111" DevFlags="#x0003" AmsPort="28673" AmsNetId="134.61.132.51.2.1" RemoteName="Device 1 (EtherCAT)" InfoImageId="2">
 				<Name>Device 1 (EtherCAT)</Name>
 				<AddressInfo>
 					<Pnp>
-						<DeviceDesc/>
-						<DeviceName/>
+						<DeviceDesc></DeviceDesc>
+						<DeviceName></DeviceName>
 						<DeviceData>000000000000</DeviceData>
 					</Pnp>
 				</AddressInfo>
 				<Image Id="1" AddrType="9" ImageType="3">
 					<Name>Image</Name>
 				</Image>
-				<Box BoxType="9099" Id="1">
+				<Box Id="1" BoxType="9099">
 					<Name>Coupler (EK1100)</Name>
 					<ImageId>1000</ImageId>
 					<EtherCAT SlaveType="1" PdiType="#x0d00" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x044c2c52" RevisionNo="#x00120000" PortPhys="305" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EK1100 EtherCAT Coupler (2A E-Bus)" Desc="EK1100" PortABoxInfo="#x00ffffff"/>
-					<Box BoxType="9099" Id="2">
+					<Box Id="2" BoxType="9099">
 						<Name>InpPressSens (EL3064)</Name>
 						<ImageId>1001</ImageId>
 						<EtherCAT SlaveType="2" PdiType="#x0005" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="7" FoeType="1" VendorId="#x00000002" ProductCode="#x0bf83052" RevisionNo="#x00140000" InfoDataAddr="true" TimeoutMailbox2="2000" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL3064 4Ch. Ana. Input 0-10V" Desc="EL3064" PortABoxInfo="#x01000001">
@@ -565,35 +467,25 @@ checks State of Working Counter:
 								<ExcludePdo>#x1a01</ExcludePdo>
 								<Entry Name="Status__Underrange" Index="#x6000" Sub="#x01">
 									<Type>BIT</Type>
-									<Comment>
-										<![CDATA[Underrange event active]]>
-									</Comment>
+									<Comment><![CDATA[Underrange event active]]></Comment>
 								</Entry>
 								<Entry Name="Status__Overrange" Index="#x6000" Sub="#x02">
 									<Type>BIT</Type>
-									<Comment>
-										<![CDATA[Overrange event active]]>
-									</Comment>
+									<Comment><![CDATA[Overrange event active]]></Comment>
 								</Entry>
 								<Entry Name="Status__Limit 1" Index="#x6000" Sub="#x03" Flags="#x00000020">
 									<Type>BIT2</Type>
-									<Comment>
-										<![CDATA[Bit0: Value smaller/equal Limit1
-Bit1: Value bigger/equal Limit1]]>
-									</Comment>
+									<Comment><![CDATA[Bit0: Value smaller/equal Limit1
+Bit1: Value bigger/equal Limit1]]></Comment>
 								</Entry>
 								<Entry Name="Status__Limit 2" Index="#x6000" Sub="#x05" Flags="#x00000020">
 									<Type>BIT2</Type>
-									<Comment>
-										<![CDATA[Bit0: Value smaller/equal Limit2
-Bit1: Value bigger/equal Limit2]]>
-									</Comment>
+									<Comment><![CDATA[Bit0: Value smaller/equal Limit2
+Bit1: Value bigger/equal Limit2]]></Comment>
 								</Entry>
 								<Entry Name="Status__Error" Index="#x6000" Sub="#x07" Flags="#x00000020">
 									<Type>BIT</Type>
-									<Comment>
-										<![CDATA[Bit set when Over- or Underrange]]>
-									</Comment>
+									<Comment><![CDATA[Bit set when Over- or Underrange]]></Comment>
 								</Entry>
 								<Entry Name="Status__">
 									<Type GUID="{18071995-0000-0000-0000-002000000001}">ARRAY [0..0] OF BIT</Type>
@@ -603,15 +495,11 @@ Bit1: Value bigger/equal Limit2]]>
 								</Entry>
 								<Entry Name="Status__TxPDO State" Index="#x6000" Sub="#x0f">
 									<Type>BIT</Type>
-									<Comment>
-										<![CDATA[TRUE when this TxPDO is not valid]]>
-									</Comment>
+									<Comment><![CDATA[TRUE when this TxPDO is not valid]]></Comment>
 								</Entry>
 								<Entry Name="Status__TxPDO Toggle" Index="#x6000" Sub="#x10">
 									<Type>BIT</Type>
-									<Comment>
-										<![CDATA[Bit toggles everytime when new value available]]>
-									</Comment>
+									<Comment><![CDATA[Bit toggles everytime when new value available]]></Comment>
 								</Entry>
 								<Entry Name="Value" Index="#x6000" Sub="#x11" Flags="#x00020000">
 									<Type>INT</Type>
@@ -627,35 +515,25 @@ Bit1: Value bigger/equal Limit2]]>
 								<ExcludePdo>#x1a03</ExcludePdo>
 								<Entry Name="Status__Underrange" Index="#x6010" Sub="#x01">
 									<Type>BIT</Type>
-									<Comment>
-										<![CDATA[Underrange event active]]>
-									</Comment>
+									<Comment><![CDATA[Underrange event active]]></Comment>
 								</Entry>
 								<Entry Name="Status__Overrange" Index="#x6010" Sub="#x02">
 									<Type>BIT</Type>
-									<Comment>
-										<![CDATA[Overrange event active]]>
-									</Comment>
+									<Comment><![CDATA[Overrange event active]]></Comment>
 								</Entry>
 								<Entry Name="Status__Limit 1" Index="#x6010" Sub="#x03">
 									<Type>BIT2</Type>
-									<Comment>
-										<![CDATA[Bit0: Value smaller/equal Limit1
-Bit1: Value bigger/equal Limit1]]>
-									</Comment>
+									<Comment><![CDATA[Bit0: Value smaller/equal Limit1
+Bit1: Value bigger/equal Limit1]]></Comment>
 								</Entry>
 								<Entry Name="Status__Limit 2" Index="#x6010" Sub="#x05">
 									<Type>BIT2</Type>
-									<Comment>
-										<![CDATA[Bit0: Value smaller/equal Limit2
-Bit1: Value bigger/equal Limit2]]>
-									</Comment>
+									<Comment><![CDATA[Bit0: Value smaller/equal Limit2
+Bit1: Value bigger/equal Limit2]]></Comment>
 								</Entry>
 								<Entry Name="Status__Error" Index="#x6010" Sub="#x07">
 									<Type>BIT</Type>
-									<Comment>
-										<![CDATA[Bit set when Over- or Underrange]]>
-									</Comment>
+									<Comment><![CDATA[Bit set when Over- or Underrange]]></Comment>
 								</Entry>
 								<Entry Name="Status__">
 									<Type GUID="{18071995-0000-0000-0000-002000000001}">ARRAY [0..0] OF BIT</Type>
@@ -665,15 +543,11 @@ Bit1: Value bigger/equal Limit2]]>
 								</Entry>
 								<Entry Name="Status__TxPDO State" Index="#x6010" Sub="#x0f">
 									<Type>BIT</Type>
-									<Comment>
-										<![CDATA[TRUE when this TxPDO is not valid]]>
-									</Comment>
+									<Comment><![CDATA[TRUE when this TxPDO is not valid]]></Comment>
 								</Entry>
 								<Entry Name="Status__TxPDO Toggle" Index="#x6010" Sub="#x10">
 									<Type>BIT</Type>
-									<Comment>
-										<![CDATA[Bit toggles everytime when new value available]]>
-									</Comment>
+									<Comment><![CDATA[Bit toggles everytime when new value available]]></Comment>
 								</Entry>
 								<Entry Name="Value" Index="#x6010" Sub="#x11" Flags="#x00020000">
 									<Type>INT</Type>
@@ -689,35 +563,25 @@ Bit1: Value bigger/equal Limit2]]>
 								<ExcludePdo>#x1a05</ExcludePdo>
 								<Entry Name="Status__Underrange" Index="#x6020" Sub="#x01">
 									<Type>BIT</Type>
-									<Comment>
-										<![CDATA[Underrange event active]]>
-									</Comment>
+									<Comment><![CDATA[Underrange event active]]></Comment>
 								</Entry>
 								<Entry Name="Status__Overrange" Index="#x6020" Sub="#x02">
 									<Type>BIT</Type>
-									<Comment>
-										<![CDATA[Overrange event active]]>
-									</Comment>
+									<Comment><![CDATA[Overrange event active]]></Comment>
 								</Entry>
 								<Entry Name="Status__Limit 1" Index="#x6020" Sub="#x03">
 									<Type>BIT2</Type>
-									<Comment>
-										<![CDATA[Bit0: Value smaller/equal Limit1
-Bit1: Value bigger/equal Limit1]]>
-									</Comment>
+									<Comment><![CDATA[Bit0: Value smaller/equal Limit1
+Bit1: Value bigger/equal Limit1]]></Comment>
 								</Entry>
 								<Entry Name="Status__Limit 2" Index="#x6020" Sub="#x05">
 									<Type>BIT2</Type>
-									<Comment>
-										<![CDATA[Bit0: Value smaller/equal Limit2
-Bit1: Value bigger/equal Limit2]]>
-									</Comment>
+									<Comment><![CDATA[Bit0: Value smaller/equal Limit2
+Bit1: Value bigger/equal Limit2]]></Comment>
 								</Entry>
 								<Entry Name="Status__Error" Index="#x6020" Sub="#x07">
 									<Type>BIT</Type>
-									<Comment>
-										<![CDATA[Bit set when Over- or Underrange]]>
-									</Comment>
+									<Comment><![CDATA[Bit set when Over- or Underrange]]></Comment>
 								</Entry>
 								<Entry Name="Status__">
 									<Type GUID="{18071995-0000-0000-0000-002000000001}">ARRAY [0..0] OF BIT</Type>
@@ -727,15 +591,11 @@ Bit1: Value bigger/equal Limit2]]>
 								</Entry>
 								<Entry Name="Status__TxPDO State" Index="#x6020" Sub="#x0f">
 									<Type>BIT</Type>
-									<Comment>
-										<![CDATA[TRUE when this TxPDO is not valid]]>
-									</Comment>
+									<Comment><![CDATA[TRUE when this TxPDO is not valid]]></Comment>
 								</Entry>
 								<Entry Name="Status__TxPDO Toggle" Index="#x6020" Sub="#x10">
 									<Type>BIT</Type>
-									<Comment>
-										<![CDATA[Bit toggles everytime when new value available]]>
-									</Comment>
+									<Comment><![CDATA[Bit toggles everytime when new value available]]></Comment>
 								</Entry>
 								<Entry Name="Value" Index="#x6020" Sub="#x11" Flags="#x00020000">
 									<Type>INT</Type>
@@ -751,35 +611,25 @@ Bit1: Value bigger/equal Limit2]]>
 								<ExcludePdo>#x1a07</ExcludePdo>
 								<Entry Name="Status__Underrange" Index="#x6030" Sub="#x01">
 									<Type>BIT</Type>
-									<Comment>
-										<![CDATA[Underrange event active]]>
-									</Comment>
+									<Comment><![CDATA[Underrange event active]]></Comment>
 								</Entry>
 								<Entry Name="Status__Overrange" Index="#x6030" Sub="#x02">
 									<Type>BIT</Type>
-									<Comment>
-										<![CDATA[Overrange event active]]>
-									</Comment>
+									<Comment><![CDATA[Overrange event active]]></Comment>
 								</Entry>
 								<Entry Name="Status__Limit 1" Index="#x6030" Sub="#x03">
 									<Type>BIT2</Type>
-									<Comment>
-										<![CDATA[Bit0: Value smaller/equal Limit1
-Bit1: Value bigger/equal Limit1]]>
-									</Comment>
+									<Comment><![CDATA[Bit0: Value smaller/equal Limit1
+Bit1: Value bigger/equal Limit1]]></Comment>
 								</Entry>
 								<Entry Name="Status__Limit 2" Index="#x6030" Sub="#x05">
 									<Type>BIT2</Type>
-									<Comment>
-										<![CDATA[Bit0: Value smaller/equal Limit2
-Bit1: Value bigger/equal Limit2]]>
-									</Comment>
+									<Comment><![CDATA[Bit0: Value smaller/equal Limit2
+Bit1: Value bigger/equal Limit2]]></Comment>
 								</Entry>
 								<Entry Name="Status__Error" Index="#x6030" Sub="#x07">
 									<Type>BIT</Type>
-									<Comment>
-										<![CDATA[Bit set when Over- or Underrange]]>
-									</Comment>
+									<Comment><![CDATA[Bit set when Over- or Underrange]]></Comment>
 								</Entry>
 								<Entry Name="Status__">
 									<Type GUID="{18071995-0000-0000-0000-002000000001}">ARRAY [0..0] OF BIT</Type>
@@ -789,15 +639,11 @@ Bit1: Value bigger/equal Limit2]]>
 								</Entry>
 								<Entry Name="Status__TxPDO State" Index="#x6030" Sub="#x0f">
 									<Type>BIT</Type>
-									<Comment>
-										<![CDATA[TRUE when this TxPDO is not valid]]>
-									</Comment>
+									<Comment><![CDATA[TRUE when this TxPDO is not valid]]></Comment>
 								</Entry>
 								<Entry Name="Status__TxPDO Toggle" Index="#x6030" Sub="#x10">
 									<Type>BIT</Type>
-									<Comment>
-										<![CDATA[Bit toggles everytime when new value available]]>
-									</Comment>
+									<Comment><![CDATA[Bit toggles everytime when new value available]]></Comment>
 								</Entry>
 								<Entry Name="Value" Index="#x6030" Sub="#x11" Flags="#x00020000">
 									<Type>INT</Type>
@@ -815,7 +661,7 @@ Bit1: Value bigger/equal Limit2]]>
 							<CoeProfile ProfileNo="19665801"/>
 						</EtherCAT>
 					</Box>
-					<Box BoxType="9099" Id="3">
+					<Box Id="3" BoxType="9099">
 						<Name>InpTempSens1 (EL3204-0200)</Name>
 						<ImageId>1001</ImageId>
 						<EtherCAT SlaveType="2" PdiType="#x0005" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="3" FoeType="1" VendorId="#x00000002" ProductCode="#x0c843052" RevisionNo="#x001200c8" InfoDataAddr="true" RepeatSupport="true" TimeoutMailbox2="2000" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL3204-0200 4Ch. Ana. In. PT1000 (RTD)" Desc="EL3204-0200" PortABoxInfo="#x01000002">
@@ -936,7 +782,7 @@ Bit1: Value bigger/equal Limit2]]>
 							<CoeProfile ProfileNo="20976521"/>
 						</EtherCAT>
 					</Box>
-					<Box BoxType="9099" Id="4">
+					<Box Id="4" BoxType="9099">
 						<Name>InpTempSens2 (EL3204-0200)</Name>
 						<ImageId>1001</ImageId>
 						<EtherCAT EtherCatAddr="1004" SlaveType="2" AdsServerAddress="000000000000ec03" PdiType="#x0005" EtherCatAddrFixed="true" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="3" FoeType="1" VendorId="#x00000002" ProductCode="#x0c843052" RevisionNo="#x001200c8" InfoDataAddr="true" RepeatSupport="true" TimeoutMailbox2="2000" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL3204-0200 4Ch. Ana. In. PT1000 (RTD)" Desc="EL3204-0200" PortABoxInfo="#x01000003">
@@ -1057,7 +903,7 @@ Bit1: Value bigger/equal Limit2]]>
 							<CoeProfile ProfileNo="20976521"/>
 						</EtherCAT>
 					</Box>
-					<Box BoxType="9099" Id="5">
+					<Box Id="5" BoxType="9099">
 						<Name>InpTempSens3 (EL3204-0200)</Name>
 						<ImageId>1001</ImageId>
 						<EtherCAT SlaveType="2" PdiType="#x0005" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="3" FoeType="1" VendorId="#x00000002" ProductCode="#x0c843052" RevisionNo="#x001200c8" InfoDataAddr="true" RepeatSupport="true" TimeoutMailbox2="2000" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL3204-0200 4Ch. Ana. In. PT1000 (RTD)" Desc="EL3204-0200" PortABoxInfo="#x01000004">
@@ -1178,7 +1024,7 @@ Bit1: Value bigger/equal Limit2]]>
 							<CoeProfile ProfileNo="20976521"/>
 						</EtherCAT>
 					</Box>
-					<Box BoxType="9099" Id="6">
+					<Box Id="6" BoxType="9099">
 						<Name>InpPowMeas (EL3403-0010)</Name>
 						<ImageId>1001</ImageId>
 						<EtherCAT SlaveType="2" PdiType="#x0805" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="3" FoeType="1" VendorId="#x00000002" ProductCode="#x0d4b3052" RevisionNo="#x0018000a" InfoDataAddr="true" TimeoutMailbox2="2000" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL3403-0010 3Ch. Power Measuring, 5A" Desc="EL3403-0010" PortABoxInfo="#x01000005">
@@ -1311,7 +1157,7 @@ Bit1: Value bigger/equal Limit2]]>
 							<CoeProfile ProfileNo="22287241"/>
 						</EtherCAT>
 					</Box>
-					<Box BoxType="9099" Id="7">
+					<Box Id="7" BoxType="9099">
 						<Name>AnalogOutp (EL4004)</Name>
 						<ImageId>1002</ImageId>
 						<EtherCAT SlaveType="2" PdiType="#x0405" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="3" FoeType="1" VendorId="#x00000002" ProductCode="#x0fa43052" RevisionNo="#x00140000" InfoDataAddr="true" TimeoutMailbox2="2000" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL4004 4Ch. Ana. Output 0-10V, 12bit" Desc="EL4004" PortABoxInfo="#x01000006">
@@ -1350,7 +1196,7 @@ Bit1: Value bigger/equal Limit2]]>
 							<CoeProfile ProfileNo="26219401"/>
 						</EtherCAT>
 					</Box>
-					<Box BoxType="9099" Id="8">
+					<Box Id="8" BoxType="9099">
 						<Name>OutpSwitchValv (EL2652)</Name>
 						<ImageId>1003</ImageId>
 						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x0a5c3052" RevisionNo="#x00120000" RepeatSupport="true" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL2652 2Ch. Relay Output, CO (230V AC / 30V DC)" Desc="EL2652" PortABoxInfo="#x01000007">
@@ -1368,7 +1214,7 @@ Bit1: Value bigger/equal Limit2]]>
 							</Pdo>
 						</EtherCAT>
 					</Box>
-					<Box BoxType="9099" Id="9">
+					<Box Id="9" BoxType="9099">
 						<Name>OutpCont (EL2622)</Name>
 						<ImageId>1003</ImageId>
 						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x0a3e3052" RevisionNo="#x00120000" RepeatSupport="true" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL2622 2Ch. Relay Output, NO (230V AC / 30V DC)" Desc="EL2622" PortABoxInfo="#x01000008">
@@ -1386,7 +1232,7 @@ Bit1: Value bigger/equal Limit2]]>
 							</Pdo>
 						</EtherCAT>
 					</Box>
-					<Box BoxType="9099" Id="10">
+					<Box Id="10" BoxType="9099">
 						<Name>InpTempSens3wire (EL3214)</Name>
 						<ImageId>1001</ImageId>
 						<EtherCAT SlaveType="2" PdiType="#x0005" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="3" FoeType="1" VendorId="#x00000002" ProductCode="#x0c8e3052" RevisionNo="#x00110000" InfoDataAddr="true" RepeatSupport="true" TimeoutMailbox2="2000" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL3214 4Ch. Ana. Input PT100 (RTD)" Desc="EL3214" PortABoxInfo="#x01000009">
