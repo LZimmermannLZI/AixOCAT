@@ -14,7 +14,7 @@ END_VAR
 
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[fSpeedSetRaw := REAL_TO_INT(fSpeed);]]></ST>
+      <ST><![CDATA[fSpeedSetRaw := REAL_TO_INT(fSpeed*fFactor);]]></ST>
     </Implementation>
     <LineIds Name="FB_FanControl">
       <LineId Id="9" Count="0" />
