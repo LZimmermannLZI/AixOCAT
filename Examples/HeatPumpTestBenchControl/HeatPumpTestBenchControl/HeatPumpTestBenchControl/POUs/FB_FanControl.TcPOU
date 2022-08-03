@@ -6,14 +6,14 @@ VAR_INPUT
 	fSpeed	:	REAL;		//Fan speed setpoint 0..100%
 END_VAR
 VAR
-	fSpeedSetRaw  AT%Q*	: REAL 	:=0; 	//Raw value for terminal => send to valve
+	fSpeedSetRaw  AT%Q*	: INT 	:=0; 	//Raw value for terminal => send to valve
 END_VAR
 VAR CONSTANT
 		fFactor : REAL :=327.67;	// factor for calculating the terminal integer values (from percentage to int)
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[fSpeedSetRaw := fSpeed;]]></ST>
+      <ST><![CDATA[fSpeedSetRaw := REAL_TO_INT(fSpeed*fFactor);]]></ST>
     </Implementation>
     <LineIds Name="FB_FanControl">
       <LineId Id="18" Count="0" />
