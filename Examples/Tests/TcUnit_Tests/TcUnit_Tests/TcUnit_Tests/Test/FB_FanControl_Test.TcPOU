@@ -12,13 +12,13 @@ FanSpeedZero();]]></ST>
     <Method Name="FanSpeedMax" Id="{cba8bbbb-a15f-4112-9849-e0b4cc86d529}">
       <Declaration><![CDATA[METHOD FanSpeedMax
 VAR
-	FanControlRes: FB_FanControl;			//Actual value of FanControl
-	ExpectedValue : REAL := 327.67;			//Expected value for FanControl
+	FanControlRes : FB_FanControl;			//Actual value of FanControl
+	ExpectedValue : REAL := 100;			//Expected value for FanControl
 
 END_VAR
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[TEST('FanSpeedZero');
+        <ST><![CDATA[TEST('FanSpeedMax');
  
 FanControlRes (fSpeed := 100);
  
@@ -32,7 +32,7 @@ TEST_FINISHED();]]></ST>
     <Method Name="FanSpeedZero" Id="{737b7d60-6078-45b6-9461-42c67f132871}">
       <Declaration><![CDATA[METHOD FanSpeedZero
 VAR
-	FanControlRes: FB_FanControl;		//Actual value of FanControl
+	FanControlRes : FB_FanControl;		//Actual value of FanControl
 	ExpectedValue : REAL := 0;			//Expected value for FanControl
 
 END_VAR
