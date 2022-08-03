@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.9">
-  <POU Name="FB_FanControl_old" Id="{643c59a2-f668-40c9-a3c5-9486aaf77939}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_FanControl_old
+  <POU Name="FB_FanControl" Id="{2862505f-0eab-4e09-abf3-83a637c0182e}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_FanControl
 VAR_INPUT
 	fSpeed	:	REAL;		//Fan speed setpoint 0..100%
 END_VAR
@@ -11,12 +11,13 @@ END_VAR
 VAR CONSTANT
 		fFactor : REAL :=327.67;	// factor for calculating the terminal integer values (from percentage to int)
 END_VAR
+
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[fSpeedSetRaw := REAL_TO_INT(fSpeed*fFactor);]]></ST>
+      <ST><![CDATA[fSpeedSetRaw := REAL_TO_INT(fSpeed);]]></ST>
     </Implementation>
-    <LineIds Name="FB_FanControl_old">
-      <LineId Id="18" Count="0" />
+    <LineIds Name="FB_FanControl">
+      <LineId Id="9" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>
