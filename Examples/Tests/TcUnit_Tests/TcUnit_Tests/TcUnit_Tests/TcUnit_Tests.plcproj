@@ -2,38 +2,44 @@
   <PropertyGroup>
     <FileVersion>1.0.0.0</FileVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{71340401-166b-4b3c-951f-c275b9fb0b72}</ProjectGuid>
+    <ProjectGuid>{b49d5430-9290-4d23-8b7f-a832bc438e55}</ProjectGuid>
     <SubObjectsSortedByName>True</SubObjectsSortedByName>
     <DownloadApplicationInfo>true</DownloadApplicationInfo>
     <WriteProductVersion>true</WriteProductVersion>
     <GenerateTpy>false</GenerateTpy>
     <Name>TcUnit_Tests</Name>
     <ProgramVersion>3.1.4024.12</ProgramVersion>
-    <Application>{35851b97-2c90-46ed-bd99-0442647a8906}</Application>
-    <TypeSystem>{581525e2-cedf-4bdf-bec9-db4de5ce1a10}</TypeSystem>
-    <Implicit_Task_Info>{481e36e0-313d-4e52-bdc8-f8e9c554abf4}</Implicit_Task_Info>
-    <Implicit_KindOfTask>{cdb0557d-0490-4a84-83c4-beb1beb6c5e0}</Implicit_KindOfTask>
-    <Implicit_Jitter_Distribution>{e405960b-4530-4cfa-9ddc-367d09eb4e37}</Implicit_Jitter_Distribution>
-    <LibraryReferences>{a4014713-4251-48cc-b4d0-b53d8622c6ad}</LibraryReferences>
+    <Application>{43316c1d-8b37-46a2-b51c-d42b7a505d96}</Application>
+    <TypeSystem>{a5937bf6-44b2-4c9e-b4d4-00676fddf527}</TypeSystem>
+    <Implicit_Task_Info>{6f724806-02b3-4fff-9cc4-e890c5b6c121}</Implicit_Task_Info>
+    <Implicit_KindOfTask>{89930dd5-addb-4d73-9901-f6f6025ce4ab}</Implicit_KindOfTask>
+    <Implicit_Jitter_Distribution>{6a98c118-413b-4b4c-b735-558b51b3a51a}</Implicit_Jitter_Distribution>
+    <LibraryReferences>{a1726933-e0f1-4669-bbec-a30f0aba6db2}</LibraryReferences>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Tests\FB_FanControl_Test.TcPOU">
+    <Compile Include="POUs\FB_FanControl.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Tests\FC_HeatingCurve_Test.TcPOU">
+    <Compile Include="POUs\FC_HeatingCurve.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Tests\PRG_TEST.TcPOU">
+    <Compile Include="Test\FB_FanControl_Test.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Test\FC_HeatingCurve_Test.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Test\PRG_TEST.TcPOU">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DUTs" />
     <Folder Include="GVLs" />
-    <Folder Include="Tests" />
+    <Folder Include="Test" />
     <Folder Include="VISUs" />
     <Folder Include="POUs" />
   </ItemGroup>
@@ -54,6 +60,11 @@
       <DefaultResolution>TcUnit, * (www.tcunit.org)</DefaultResolution>
       <Namespace>TcUnit</Namespace>
     </PlaceholderReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TcUnit_Tests.tmc">
+      <SubType>Content</SubType>
+    </None>
   </ItemGroup>
   <ProjectExtensions>
     <PlcProjectOptions>

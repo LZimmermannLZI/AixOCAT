@@ -1,25 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
-  <POU Name="FB_FanControl_Test" Id="{25e59672-5b21-4b51-8765-679c25b545fe}" SpecialFunc="None">
+  <POU Name="FB_FanControl_Test" Id="{d336d90e-9b76-4ab1-86b2-59be1e37978b}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_FanControl_Test EXTENDS FB_TestSuite
 VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[]]></ST>
+      <ST><![CDATA[FanSpeedMax();
+FanSpeedZero();]]></ST>
     </Implementation>
-    <Method Name="FanSpeedMax" Id="{4dbabc29-d263-45c4-a9db-736404732271}">
+    <Method Name="FanSpeedMax" Id="{cba8bbbb-a15f-4112-9849-e0b4cc86d529}">
       <Declaration><![CDATA[METHOD FanSpeedMax
 VAR
-	FanControlRes: REAL;			//Actual value of FanControl
-	ExpectedValue : REAL := 100;	//Expected value for FanControl
+	FanControlRes: FB_FanControl;			//Actual value of FanControl
+	ExpectedValue : REAL := 327.67;			//Expected value for FanControl
 
 END_VAR
 ]]></Declaration>
       <Implementation>
         <ST><![CDATA[TEST('FanSpeedZero');
  
-FanControlRes := FB_FanControl(fSpeed := 327.67);
+FanControlRes (fSpeed := 100);
  
 AssertEquals(Expected := ExpectedValue,
              Actual := FanControlRes,
@@ -28,18 +29,18 @@ AssertEquals(Expected := ExpectedValue,
 TEST_FINISHED();]]></ST>
       </Implementation>
     </Method>
-    <Method Name="FanSpeedZero" Id="{909e3c1b-9eda-46c6-bea1-765e0c249ea9}">
+    <Method Name="FanSpeedZero" Id="{737b7d60-6078-45b6-9461-42c67f132871}">
       <Declaration><![CDATA[METHOD FanSpeedZero
 VAR
-	FanControlRes: REAL;		//Actual value of FanControl
-	ExpectedValue : REAL := 0;	//Expected value for FanControl
+	FanControlRes: FB_FanControl;		//Actual value of FanControl
+	ExpectedValue : REAL := 0;			//Expected value for FanControl
 
 END_VAR
 ]]></Declaration>
       <Implementation>
         <ST><![CDATA[TEST('FanSpeedZero');
  
-FanControlRes := FB_FanControl(fSpeed := 0);
+FanControlRes (fSpeed := 0);
  
 AssertEquals(Expected := ExpectedValue,
              Actual := FanControlRes,
@@ -50,13 +51,14 @@ TEST_FINISHED();]]></ST>
     </Method>
     <LineIds Name="FB_FanControl_Test">
       <LineId Id="9" Count="0" />
+      <LineId Id="13" Count="0" />
     </LineIds>
     <LineIds Name="FB_FanControl_Test.FanSpeedMax">
       <LineId Id="12" Count="7" />
       <LineId Id="5" Count="0" />
     </LineIds>
     <LineIds Name="FB_FanControl_Test.FanSpeedZero">
-      <LineId Id="10" Count="7" />
+      <LineId Id="12" Count="7" />
       <LineId Id="5" Count="0" />
     </LineIds>
   </POU>
