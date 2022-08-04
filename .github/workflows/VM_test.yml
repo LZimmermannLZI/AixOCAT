@@ -20,11 +20,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
         
-      - name: Refresh hardlinks on VM
+      - name: refresh hardlinks on VM
         shell: cmd
-        run: "C:\Users\Rando\AixOCAT\Examples\HeatSupplyCircle_links_DELETE.bat"
-        run: "C:\Users\Rando\AixOCAT\Examples\HeatSupplyCircle_hardlink.bat"
- 
+        run: '"C:\Users\Rando\AixOCAT\Examples\HeatSupplyCircle_links_DELETE.bat" "C:\Users\Rando\AixOCAT\Examples\HeatSupplyCircle_hardlink.bat"'
+        
       - name: Run TcUnit-Runner
         shell: cmd
         # Start TcUnit-Runner with a timeout of 5 min
