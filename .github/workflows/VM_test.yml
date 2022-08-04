@@ -20,9 +20,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
         
-#       - name: refresh hardlinks on VM
-#         shell: cmd
-#         run: 'C:\actions-runner\_work\AixOCAT\AixOCAT\Examples\HeatSupplyCircle_links_DELETE.bat'
+      - name: refresh hardlinks on VM
+        shell: cmd
+        run: '"C:\Program Files (x86)\TcUnit-Runner\HeatSupplyCircle_links_DELETE.bat" "C:\Program Files (x86)\TcUnit-Runner\HeatSupplyCircle_hardlink.bat"'
         
       - name: Run TcUnit-Runner
         shell: cmd
