@@ -22,7 +22,7 @@ jobs:
         
       - name: refresh hardlinks on VM
         shell: cmd
-        run: 'C:\Users\Rando\AixOCAT\Examples\HeatSupplyCircle_links_DELETE.bat'
+        run: 'C:\actions-runner\_work\AixOCAT\AixOCAT\Examples\HeatSupplyCircle_links_DELETE.bat'
         
       - name: Run TcUnit-Runner
         shell: cmd
