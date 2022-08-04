@@ -20,9 +20,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
         
-      - name: refresh hardlink
+      - name: Directory for hardlink
         shell: cmd
-        run: '"mkdir C:\actions-runner\_work\AixOCAT\AixOCAT\Examples\Tests\TcUnit_Tests\TcUnit_Tests\TcUnit_Tests\POUs" "C:\actions-runner\_work\AixOCAT\AixOCAT\Examples\HeatSupplyCircle_links_DELETE.bat" "C:\actions-runner\_work\AixOCAT\AixOCAT\Examples\HeatSupplyCircle_hardlink.bat"'
+        run: mkdir C:\actions-runner\_work\AixOCAT\AixOCAT\Examples\Tests\TcUnit_Tests\TcUnit_Tests\TcUnit_Tests\POUs
+        
+      - name: Refresh hard links
+        shell: cmd
+        run: '"C:\actions-runner\_work\AixOCAT\AixOCAT\Examples\HeatSupplyCircle_links_DELETE.bat" "C:\actions-runner\_work\AixOCAT\AixOCAT\Examples\HeatSupplyCircle_hardlink.bat"'
                 
       - name: Run TcUnit-Runner
         shell: cmd
