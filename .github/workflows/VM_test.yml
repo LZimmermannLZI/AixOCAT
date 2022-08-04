@@ -22,7 +22,7 @@ jobs:
         
       - name: refresh hardlinks on VM
         shell: cmd
-        run: '"C:\Program Files (x86)\TcUnit-Runner\HeatSupplyCircle_links_DELETE.bat" "C:\Program Files (x86)\TcUnit-Runner\HeatSupplyCircle_hardlink.bat"'
+        run: 'C:\Program Files (x86)\TcUnit-Runner\HeatSupplyCircle_links_DELETE.bat'
         
       - name: Run TcUnit-Runner
         shell: cmd
