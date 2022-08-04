@@ -15,7 +15,7 @@ END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[fSpeedSetRaw := REAL_TO_INT(fSpeed*fFactor);
-// Testline to check for correct hardlink updating
+
 ]]></ST>
     </Implementation>
     <LineIds Name="FB_FanControl">
