@@ -2,7 +2,7 @@
 name: VM TcUnit-Runner
  
 on:
-  commit:
+  push:
     branches: [ develop ]
   pull_request:
     branches: [ develop ]
