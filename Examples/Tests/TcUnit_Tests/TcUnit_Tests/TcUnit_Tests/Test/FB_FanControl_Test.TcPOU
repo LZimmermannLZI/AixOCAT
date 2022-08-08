@@ -36,7 +36,7 @@ TEST_FINISHED();]]></ST>
 VAR
 	fbFanControl : FB_FanControl;		//Function Block call
 	FanControlRes : INT;				//Actual value of FanControl
-	ExpectedValue : INT := 0;			//Expected value for FanControl
+	ExpectedValue : INT := 1;			//Expected value for FanControl
 
 END_VAR
 ]]></Declaration>
