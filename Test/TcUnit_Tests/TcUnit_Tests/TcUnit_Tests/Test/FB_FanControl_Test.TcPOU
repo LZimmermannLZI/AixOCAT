@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
+  <POU Name="FB_FanControl_Test" Id="{d336d90e-9b76-4ab1-86b2-59be1e37978b}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_FanControl_Test EXTENDS FB_TestSuite
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[FanSpeedMax();
+FanSpeedZero();]]></ST>
+    </Implementation>
+    <Method Name="FanSpeedMax" Id="{cba8bbbb-a15f-4112-9849-e0b4cc86d529}">
+      <Declaration><![CDATA[METHOD FanSpeedMax
+VAR
+	fbFanControl : FB_FanControl;		//Function Block call
+	FanControlRes : INT;				//Actual value of FanControl
+	ExpectedValue : INT := 32767;		//Expected value for FanControl
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[TEST('FanSpeedMax');
+ 
+fbFanControl.fSpeed := 100;
+fbFanControl();
+FanControlRes := fbFanControl.fSpeedSetRaw;
+ 
+AssertEquals(Expected := ExpectedValue,
+             Actual := FanControlRes,
+             Message := 'The calculation is not correct');
+ 
+TEST_FINISHED();]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="FanSpeedZero" Id="{737b7d60-6078-45b6-9461-42c67f132871}">
+      <Declaration><![CDATA[METHOD FanSpeedZero
+VAR
+	fbFanControl : FB_FanControl;		//Function Block call
+	FanControlRes : INT;				//Actual value of FanControl
+	ExpectedValue : INT := 0;			//Expected value for FanControl
+
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[TEST('FanSpeedZero');
+ 
+fbFanControl.fSpeed := 0;
+fbFanControl();
+FanControlRes := fbFanControl.fSpeedSetRaw;
+ 
+AssertEquals(Expected := ExpectedValue,
+             Actual := FanControlRes,
+             Message := 'The calculation is not correct');
+ 
+TEST_FINISHED();]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="FB_FanControl_Test">
+      <LineId Id="9" Count="0" />
+      <LineId Id="13" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_FanControl_Test.FanSpeedMax">
+      <LineId Id="12" Count="1" />
+      <LineId Id="28" Count="2" />
+      <LineId Id="15" Count="4" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_FanControl_Test.FanSpeedZero">
+      <LineId Id="12" Count="2" />
+      <LineId Id="27" Count="1" />
+      <LineId Id="15" Count="4" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
