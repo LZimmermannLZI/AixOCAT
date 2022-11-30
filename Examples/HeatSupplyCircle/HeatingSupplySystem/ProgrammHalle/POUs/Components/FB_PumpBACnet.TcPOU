@@ -10,7 +10,7 @@ END_VAR
 VAR_OUTPUT
 	stInfo			:	ST_PumpInfo;
 	bInitSuccess	:	BOOL;
-	bError			:	BOOL;
+	bError			:	BOOL; 
 END_VAR
 VAR
 	fSetRaw		:	REAL;
