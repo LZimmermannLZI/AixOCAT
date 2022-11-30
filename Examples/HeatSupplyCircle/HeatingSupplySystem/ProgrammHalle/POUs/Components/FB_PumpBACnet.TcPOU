@@ -8,7 +8,7 @@ VAR_INPUT
 	//Control mode: 1 - CONST_SPEED, 5 - CONST_PRESSURE, 6 - CONST_DIFFPRESS, 7 - VAR_DIFFPRESS, 12 - TEMP_VARIABLE, 13 - CONST_CONTROL
 END_VAR
 VAR_OUTPUT
-	stInfo			:	ST_PumpInfo;
+	stInfo			:	ST_PumpInfo;  
 	bInitSuccess	:	BOOL;
 	bError			:	BOOL; 
 END_VAR
