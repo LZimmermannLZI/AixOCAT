@@ -5,7 +5,7 @@
 VAR_INPUT
 	fTempAmb 	: REAL; 		//Ambient temperature
 	fSlope 		: REAL := -1; 	//Slope of heatcurve
-	fOffset 	: REAL := 35;	//In °C; off set at T_amb=0°C
+	fOffset 	: REAL := 36;	//In °C; off set at T_amb=0°C
 END_VAR
 VAR
 END_VAR
